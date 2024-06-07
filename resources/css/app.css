@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.detail {
+    display: grid;
+    margin: 0 auto;
+    grid-template-areas: 
+    "back back"
+    "image description" 
+    "image description"
+    "galery galery";
+}
+
+.detail--back {
+    grid-area: back;
+}
+
+.detail--image {
+    grid-area: image;
+}
+
+.detail--info {
+    grid-area: description;
+}
+
+.detail__gallery {
+    grid-area: galery;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.forme form{
+   margin-bottom: 0 !important;
+}
+
+@media screen and (max-width: 768px) {
+    .detail {
+        grid-template-areas: 
+        "back"
+        "image"
+        "description"
+        "galery";
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
